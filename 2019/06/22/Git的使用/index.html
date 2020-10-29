@@ -192,8 +192,8 @@
                 post-container">
 
                 <h1 id="Git的使用"><a href="#Git的使用" class="headerlink" title="Git的使用"></a>Git的使用</h1><h2 id="I-使用Git-amp-GitHubRepo-amp-Typora构建笔记"><a href="#I-使用Git-amp-GitHubRepo-amp-Typora构建笔记" class="headerlink" title="I. 使用Git&amp;GitHubRepo&amp;Typora构建笔记"></a>I. 使用Git&amp;GitHubRepo&amp;Typora构建笔记</h2><h5 id="1-在typora偏好设置中选中存入图片复制到assets文件夹中"><a href="#1-在typora偏好设置中选中存入图片复制到assets文件夹中" class="headerlink" title="1.在typora偏好设置中选中存入图片复制到assets文件夹中"></a>1.在typora偏好设置中选中存入图片复制到assets文件夹中</h5><p>并且设置为<strong>优先使用相关路径</strong>（否则在Github中Typora仍然无法顺利显示图片）</p>
-<h6 id><a href="#" class="headerlink" title></a><img src="Git的使用.assets/1570787625890.png" alt="1570787625890"></h6><h5 id="2-在整个存放TyporaNote与Assets的文件夹外建立git"><a href="#2-在整个存放TyporaNote与Assets的文件夹外建立git" class="headerlink" title="2.在整个存放TyporaNote与Assets的文件夹外建立git"></a>2.在整个存放TyporaNote与Assets的文件夹外建立git</h5><p>安装git之后右键文件夹打开git bash here</p>
-<p><img src="Git的使用.assets/1570785291509.png" alt="1570785291509"></p>
+<h6 id><a href="#" class="headerlink" title></a><img src="https://i.loli.net/2020/10/29/P8e9GuzAch4qlrE.png" alt="1570787625890"></h6><h5 id="2-在整个存放TyporaNote与Assets的文件夹外建立git"><a href="#2-在整个存放TyporaNote与Assets的文件夹外建立git" class="headerlink" title="2.在整个存放TyporaNote与Assets的文件夹外建立git"></a>2.在整个存放TyporaNote与Assets的文件夹外建立git</h5><p>安装git之后右键文件夹打开git bash here</p>
+<p><img src="https://i.loli.net/2020/10/29/rf2dVSwZNnGT5K8.png" alt="1570785291509"></p>
 <p>使用git时,先设置</p>
 <blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;git config --<span class="keyword">global</span> user.name <span class="string">"Eviliclufas"</span></span><br><span class="line">&gt;git config --<span class="keyword">global</span> user.email <span class="string">"123@outlook.com"</span></span><br><span class="line">&gt;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
@@ -201,12 +201,12 @@
 <blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt; </span><br><span class="line">&gt; git init</span><br><span class="line">&gt; git add README.md</span><br><span class="line">&gt; git commit -m <span class="string">"first commit"</span></span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
 </blockquote>
-<h5 id="3-在github建立新仓库"><a href="#3-在github建立新仓库" class="headerlink" title="3.在github建立新仓库"></a>3.在github建立新仓库</h5><p><img src="Git的使用.assets/1570785378922.png" alt="1570785378922"></p>
+<h5 id="3-在github建立新仓库"><a href="#3-在github建立新仓库" class="headerlink" title="3.在github建立新仓库"></a>3.在github建立新仓库</h5><p><img src="https://i.loli.net/2020/10/29/viZbaEjKCwVp2LR.png" alt="1570785378922"></p>
 <blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;git remote add origin https://github.com/EvilicLufas/TyporaAssets.git</span><br><span class="line">&gt;git push -u origin master</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
 </blockquote>
 <p>至此你的Typora笔记以及Assets文件夹都已经上传到了github的仓库里</p>
-<p><img src="Git的使用.assets/1570785581460.png" alt="1570785581460"></p>
+<p><img src="https://i.loli.net/2020/10/29/UgGn5dheJbTXVmc.png" alt="1570785581460"></p>
 <h5 id="4-该过程中可能出现的问题（在Github创建库时不要选择创建readme）"><a href="#4-该过程中可能出现的问题（在Github创建库时不要选择创建readme）" class="headerlink" title="4.该过程中可能出现的问题（在Github创建库时不要选择创建readme）"></a>4.该过程中可能出现的问题（在Github创建库时不要选择创建readme）</h5><blockquote>
 <p>git pull 失败 ,提示：<code>fatal: refusing to merge unrelated histories</code></p>
 <p>其实这个问题是因为 两个 根本不相干的 git 库， 一个是本地库， 一个是远端库， 然后本地要去推送到远端， 远端觉得这个本地库跟自己不相干， 所以告知无法合并</p>
@@ -229,7 +229,7 @@
 <figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; git pull origin <span class="keyword">master</span> <span class="title">--allow-unrelated-histories</span></span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
 </blockquote>
 <h5 id="5-git-init-之后选择隐藏的项目-才能看到-git文件夹"><a href="#5-git-init-之后选择隐藏的项目-才能看到-git文件夹" class="headerlink" title="5.git init 之后选择隐藏的项目 才能看到.git文件夹"></a>5.git init 之后选择隐藏的项目 才能看到.git文件夹</h5><blockquote>
-<p><img src="Git的使用.assets/1570785929130.png" alt="1570785929130"></p>
+<p><img src="https://i.loli.net/2020/10/29/wHSqvClGcIL3Kzs.png" alt="1570785929130"></p>
 </blockquote>
 <h2 id="II-使用Git更新项目到本地仓库"><a href="#II-使用Git更新项目到本地仓库" class="headerlink" title="II. 使用Git更新项目到本地仓库"></a>II. 使用Git更新项目到本地仓库</h2><h5 id="1-使用git-fetch更新，相当于是从远程获取最新版本到本地，不会自动merge"><a href="#1-使用git-fetch更新，相当于是从远程获取最新版本到本地，不会自动merge" class="headerlink" title="1.使用git fetch更新，相当于是从远程获取最新版本到本地，不会自动merge"></a>1.使用git fetch更新，相当于是从远程获取最新版本到本地，不会自动merge</h5><figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">git fetch origin <span class="literal">master</span></span><br><span class="line">git log -p <span class="literal">master</span>..origin/<span class="literal">master</span></span><br><span class="line">git merge origin/<span class="literal">master</span></span><br></pre></td></tr></table></figure>
 <p>首先从远程的origin的master主分支下载最新的版本到origin/master分支上<br>然后比较本地的master分支和origin/master分支的差别<br>最后进行合并<br>上述过程其实可以用以下更清晰的方式来进行:</p>
