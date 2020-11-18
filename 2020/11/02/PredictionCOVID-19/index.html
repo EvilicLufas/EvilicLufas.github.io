@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A place record sweet memories and everyday&#39;s improvement ">
+    <meta name="keyword" content="VK">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+          COVID-19 Analyze and Forecast based on non-linear science theory - Vellichor Kyst的博客 | Vellichor Kyst&#39;s Blog
+        
+    </title>
+
+    <link rel="canonical" href="http://https://eviliclufas.github.io/2020/11/02/PredictionCOVID-19/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Vellichor Kyst&#39;s Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/archives/">Archives</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    
+<!-- Image to hack wechat -->
+<!-- <img src="http://https://eviliclufas.github.io/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}" width="0" height="0"> -->
+
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        background-image: url('/img/2020Love.jpg')
+    }
+</style>
+<header class="intro-header" >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                          <a class="tag" href="/tags/#COVID-19" title="COVID-19">COVID-19</a>
+                        
+                    </div>
+                    <h1>COVID-19 Analyze and Forecast based on non-linear science theory</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                        Posted by Vellichor Kyst on
+                        2020-11-02
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <h1 id="COVID-19-Forecast-based-on-non-linear-science-theory"><a href="#COVID-19-Forecast-based-on-non-linear-science-theory" class="headerlink" title="COVID-19 Forecast based on non-linear science theory"></a>COVID-19 Forecast based on non-linear science theory</h1><p>Class : 软英1702</p>
+<p>Name: 高歌    </p>
+<p>ID: 20175045</p>
+<p>[TOC]</p>
+<hr>
+<h2 id="Assignment-Description"><a href="#Assignment-Description" class="headerlink" title="Assignment Description"></a>Assignment Description</h2><blockquote>
+<p>2020年，新冠疫情对社会生活造成了重大影响。</p>
+<p>请以网络科学为视角，对新冠疫情进行分析: </p>
+<p>(1) 建立一个复杂网络上的新冠病毒传播动力学模 型，说明疫情爆发的特征。<br>(2) 试说明人口流动对疫情传播的影响。<br>(3) 说明隔离措施对控制病毒传播的有效性。</p>
+<p>要求: </p>
+<p>(1) 不少于2页A4纸 </p>
+<p>(2) 要求有算法的设计和分析 </p>
+<p>(3) 给出参考文献 </p>
+</blockquote>
+<h2 id="Assignment-Solution"><a href="#Assignment-Solution" class="headerlink" title="Assignment Solution"></a>Assignment Solution</h2><h4 id="Ch1-疫情传播模型介绍"><a href="#Ch1-疫情传播模型介绍" class="headerlink" title="Ch1. 疫情传播模型介绍"></a>Ch1. 疫情传播模型介绍</h4><hr>
+<p>​        准确预测COVID-19对于资源管理和制定应对流行病的策略至关重要。 我们为人类流行病建模提出了一种具有人类流动性的异构感染率模型（heterogeneous infection rate model with human mobility for epidemic modeling）。通过线性化模型并使用加权最小二乘，我们的模型能够快速适应变化趋势，并提供美国国家和州级别上已确诊病例的极其准确的预测。 我们表明，在流行病的早期，使用旅行数据会增加预测。 训练模型以进行预测还可以学习该流行病的特征。 特别是，我们表明模型参数随时间的变化可以帮助我们量化一个州或一个国家对这一流行病的反应程度。 参数的变化还使我们能够预测不同的情况，例如如果我们不理会社会疏远建议会发生什么。 </p>
+<p>​        最近爆发的COVID-19及其周围世界范围的恐慌，要求采取紧急措施遏制这一流行病。 预测像COVID-19这样的传染病的速度和严重程度，并适当分配医疗资源是应对流行病的关键。  我们的方法是完全自动化的方法，因此更具通用性。 但是，难以训练具有迅速变化的流行趋势的模型。 通常，流行病模型是通过对微分方程的数值解或通过贝叶斯推断进行训练的。 相反，我们将模型转换为线性系统，并使用加权最小二乘训练它。 较新的数据将更重地加权以适应快速变化的趋势。 此外，我们探索了各种超参数选择策略以识别最佳模型。学习模型还可以了解流行病的动态及其随着时间的变化。 我们利用变化的参数来研究各个国家和美国各州对这种流行病的反应。</p>
+<h5 id="1-1-衡量参数介绍与模型图"><a href="#1-1-衡量参数介绍与模型图" class="headerlink" title="1-1. 衡量参数介绍与模型图"></a>1-1. 衡量参数介绍与模型图</h5><p>（i）“接触减少值”（Contact Reduction Score），用于衡量一个地区减少了多少传播；  </p>
+<p>（ii）“流行疫情减少值” ( Epidemic Reduction Score )，用于衡量某个地区与趋势保持与过去参考日相同的假设情况下，确诊病例减少了多少。 此外，它还可以分析未来的情景，例如，如果发布社会疏远命令，流行趋势将是什么。</p>
+<p><img src="https://i.loli.net/2020/11/02/lWCDeORt5YHnEmL.png" alt="image-20201102093000391" style="zoom: 80%;"></p>
+<p>[^图1]: 具有人类活动能力的易感性异构模型。 该模型合并了多个感染子状态，这些子状态在一个区域内的感染率各不相同，并由于区域间的移动性而扩散。</p>
+<p><strong>Note：</strong>当前我们采用的疫情数据与分析策略基于国家/州的地区级别</p>
+<hr>
+<h4 id="Ch2-模型建立方法与原理介绍"><a href="#Ch2-模型建立方法与原理介绍" class="headerlink" title="Ch2. 模型建立方法与原理介绍"></a>Ch2. 模型建立方法与原理介绍</h4><p>我们提出了一种流行性疫情模型（图1），用于像COVID-19这样在世界范围内传播的病毒，该模型可以捕获检测</p>
+<p>（i）随时间变化的感染率</p>
+<p>（ii）任意区域</p>
+<p>（iii）人的活动模式</p>
+<p>在每个地区（医院/城市/州/国家/地区）中，一个人可以存在为以下两个状态之一：易感和受感染。 易感个体与被感染个体的接触速度取决于该个体被感染的时间，即，在t-1感染的个体的感染率为β1，在t-2感染的个体的感染率为β2，并且 等等，从而导致感染的k个子状态。 假设是，感染的持续时间受感染时间的影响。 我们假设感染了一定时间后，个体不再传播感染，即∃k，使得βi=0∀i&gt; k。 同样，从其他地区旅行的人可以增加特定地区的感染数量。</p>
+<p>我们假定这种感染可能是由于人类的流动而发生的。 假设F（q，p）表示从区域q到区域p的迁移率。 我们的模型由以下方程组表示。</p>
+<p><img src="https://i.loli.net/2020/11/09/uWpSHtGVnmcqLfY.png" alt="image-20201109235312473" style="zoom: 50%;"></p>
+<p>在此，$\S^p_t$ 和 $\I^p_ t$ 分别表示在时间t区域p中的易感个体和感染个体的数量。 参数捕获了进入该区域的乘客的影响。<br>  为了解决使用较大的k值可能使模型过拟合并且数据可能嘈杂这一事实，我们在等式(2)中合并了另一个超参数J，如下所示：</p>
+<p><img src="https://i.loli.net/2020/11/09/72K8b1xsduXzhDR.png" alt="image-20201109235842359" style="zoom: 80%;"></p>
+<p>这将对最近kJ天的k个参数产生依赖性，同时由于在J天内合并感染而具有“平滑”效果。请注意，如果我们将k = 1； J = $\infty$并忽略迁移率（= 0），则会减少 到易感染（SI）模型[7]；另一方面，在有界k = 1且J &lt;1的情况下，该模型是易受感染-释放/恢复（SIR）模型的变体[8]，其中 受感染的个体在J个时间单位内处于活动状态，尽管该模型适用于任何区域定义，但在本文中，我们仅关注国家/地区和美国州/自治区的预测。 病毒和它们的病例正在报告中，假设持续时间不变，我们就不对这一滞后进行解释，计划在将来进行工作的县级和市级预测该滞后和未报告病例的预测。</p>
+<hr>
+<h4 id="Ch3-模型训练与原理介绍"><a href="#Ch3-模型训练与原理介绍" class="headerlink" title="Ch3. 模型训练与原理介绍"></a>Ch3. 模型训练与原理介绍</h4><p>为了训练模型，我们通过设置 $\delta^p_i = \delta\beta^p_i$ 并将其学习为独立参数来对其进行线性化。 通过允许旅行者使用不同的感染率，这使模型更通用。 这不同于将一条曲线拟合到具有固定初始值的数据的传统方法，该方法计算量大且无法捕获快速变化的趋势。</p>
+<p><img src="https://i.loli.net/2020/11/12/E1yjkoBIsCU3aud.png" alt="image-20201112213033787" style="zoom: 50%;"></p>
+<p>然后，我们的模型可以用线性方程表示</p>
+<p><img src="https://i.loli.net/2020/11/12/d385Dl6mWwEuaoc.png" alt="image-20201112213150240" style="zoom: 50%;"></p>
+<p>这使我们可以使用约束线性求解器来学习参数。 仅当k和J在所有区域都相同时，此公式才有效。 为了允许不同区域使用不同的超参数，我们使用了进一步的简化方法：</p>
+<p><img src="https://i.loli.net/2020/11/12/fSp5xI2KMqGauoC.png" alt="image-20201112213539964" style="zoom:50%;"></p>
+<p>为了适应由于政策变化而导致COVID-19的快速发展趋势，我们使用加权最小二乘从可用的报告数据中学习参数   $\delta^p_i$   和 $ \beta^p_i$ 。 最小二乘意义上的最佳拟合使加权残差平方的总和最小化，即观察到的数据与我们的学习模型提供的预测值之间的差异。 我们在最小化中加入了遗忘因子1，以便在学习模型时更加重视近期的感染趋势。 较低意味着对最新数据的重视程度更高。 我们计算加权误差平方和的最小值为</p>
+<p><img src="https://i.loli.net/2020/11/12/AMTd9qanuL8Uy41.png" alt="image-20201112214015886" style="zoom: 67%;"></p>
+<p>其中 $\Delta\hat{I}^p_t$ 是新感染个体的实际数量。</p>
+<hr>
+<h4 id="Ch4-数据集介绍"><a href="#Ch4-数据集介绍" class="headerlink" title="Ch4. 数据集介绍"></a>Ch4. 数据集介绍</h4><p>我们对两个数据集进行分析-</p>
+<p>（i）全球：将每个国家/地区定义为一个区域的国家/地区级数据；  </p>
+<p>（ii）美国各州：美国的州级数据，每个州都定义为一个区域。 国家级感染来自于从JHU CSSE COVID19数据集获得的确诊病例中[1]。 这些国家的人口是从World Bank Dataset数据集获得的。 国家间旅行数据是从KCMD全球跨国旅行数据集获得的[2]，该数据集是根据全球旅游和航空客运统计数据进行估算的。 美国各州的感染数来自《纽约时报》汇编的确诊病例[3]。每个州的人口均来自美国人口普查局[4]。 州际旅行是根据美国各机场之间的航班飞行次数估算的[5]。</p>
+<p>数据集介绍 ： </p>
+<p>[1] 2019 Novel Coronavirus COVID-19 (2019-nCoV) Data Repository by Johns Hopkins CSSE;.</p>
+<p> <a href="https://github.com/CSSEGISandData/COVID-19" target="_blank" rel="noopener">https://github.com/CSSEGISandData/COVID-19</a>.</p>
+<p><img src="https://i.loli.net/2020/11/12/ITkM2C6g5vN1yQp.png" alt="image-20201112225503674" style="zoom: 25%;"></p>
+<p>[2] KCMD Global Transnational Mobility;.<br><a href="https://bluehub.jrc.ec.europa.eu/catalogues/data/dataset/ds00162" target="_blank" rel="noopener">https://bluehub.jrc.ec.europa.eu/catalogues/data/dataset/ds00162</a>.</p>
+<p><img src="https://i.loli.net/2020/11/12/F76cIfhBHTyjtEm.png" alt="image-20201112225712503" style="zoom:25%;"></p>
+<p>[3] Coronavirus (Covid-19) Data in the United States;.<br><a href="https://github.com/nytimes/covid-19-data" target="_blank" rel="noopener">https://github.com/nytimes/covid-19-data</a>.</p>
+<p>[4] State Population Totals: 2010-2019;.<br><a href="https://www.census.gov/data/datasets/time-series/demo/popest/2010s-state-total.html#par_textimage_500989927" target="_blank" rel="noopener">https://www.census.gov/data/datasets/time-series/demo/popest/2010s-state-total.html#par_textimage_500989927</a>.</p>
+<p>[5] Airport, airline and route data;. <a href="https://openflights.org/data.html" target="_blank" rel="noopener">https://openflights.org/data.html</a>.</p>
+<p><img src="https://i.loli.net/2020/11/12/li6ZfLHk5cwVx7C.png" alt="image-20201112230009812"></p>
+<hr>
+<h4 id="Ch5-测试结果"><a href="#Ch5-测试结果" class="headerlink" title="Ch5. 测试结果"></a>Ch5. 测试结果</h4><p>要选取的超参数包括<em>k，J</em> 和 $\alpha$。 最佳超参数集通过对k的网格搜索来确定<em>k，J</em> 和 $\alpha$ 在H = 3的验证集上最小化均方根误差：</p>
+<p><img src="https://i.loli.net/2020/11/13/pIRi4d5QCqfK2Gg.png" alt="image-20201113000041503" style="zoom: 50%;"></p>
+<p>我们从{0.1,0.2,…,1.0}中选择$\alpha$；</p>
+<h5 id="5-1-测试证明隔离14天的有效性"><a href="#5-1-测试证明隔离14天的有效性" class="headerlink" title="5-1. 测试证明隔离14天的有效性"></a>5-1. 测试证明隔离14天的有效性</h5><p>同时令$\ J.K \epsilon {1,2,…,14}$ 。我们将强制使得$Jk&lt;=14$天，以使新感染的依赖性受到前两周的限制。这是隔离14天的动机。 我们尝试两个设置超参数的方法：（i）固定-所有国家/州的同一组超参数（ii）变量-每个州/国家的专用参数。 接下来显示结果。</p>
+<p>我们使用称为$\ SI-kJ\alpha$（可变）和$\ SI-kJ\alpha$（固定）的两个超参数选择方案评估了H = 3的结果。 通过进一步拆分训练数据来选择最佳的参数，以设置最后三天进行验证。</p>
+<p>以下为 <strong>var_simulate_deaths.m</strong></p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="params">[pred_deaths]</span> = <span class="title">var_simulate_deaths</span><span class="params">(data_4, beta_all_cell, k_l, jp_l, horizon, base_deaths, T_start)</span></span></span><br><span class="line">    <span class="comment">%SIMULATE_PRED Summary of this function goes here</span></span><br><span class="line">    <span class="comment">%   Detailed explanation goes here</span></span><br><span class="line">    </span><br><span class="line">    num_countries = <span class="built_in">size</span>(data_4, <span class="number">1</span>);</span><br><span class="line">    maxt = <span class="built_in">size</span>(data_4, <span class="number">2</span>);</span><br><span class="line">    pred_deaths = <span class="built_in">zeros</span>(num_countries, horizon);</span><br><span class="line"></span><br><span class="line">        </span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">length</span>(jp_l) == <span class="number">1</span></span><br><span class="line">        jp_l = <span class="built_in">ones</span>(num_countries, <span class="number">1</span>)*jp_l;</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">length</span>(k_l) == <span class="number">1</span></span><br><span class="line">        k_l = <span class="built_in">ones</span>(num_countries, <span class="number">1</span>)*k_l;</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">    </span><br><span class="line">    deldata = diff(data_4')';</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> <span class="built_in">j</span>=<span class="number">1</span>:num_countries</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> sum(beta_all_cell&#123;<span class="built_in">j</span>&#125;)==<span class="number">0</span></span><br><span class="line">            pred_deaths(<span class="built_in">j</span>, :) = base_deaths(<span class="built_in">j</span>);</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line">        jp = jp_l(<span class="built_in">j</span>);</span><br><span class="line">        k = k_l(<span class="built_in">j</span>);</span><br><span class="line">    </span><br><span class="line">        jk = jp*k;</span><br><span class="line">                </span><br><span class="line">        Ikt = <span class="built_in">zeros</span>(<span class="number">1</span>,k);</span><br><span class="line">        <span class="keyword">for</span> t = T_start:maxt<span class="number">-1</span></span><br><span class="line">            Ikt1 = deldata(<span class="built_in">j</span>, t-jk:t<span class="number">-1</span>);</span><br><span class="line">            <span class="keyword">for</span> kk=<span class="number">1</span>:k</span><br><span class="line">                Ikt(kk) = sum(Ikt1((kk<span class="number">-1</span>)*jp+<span class="number">1</span> : kk*jp), <span class="number">2</span>);</span><br><span class="line">            <span class="keyword">end</span></span><br><span class="line">            X = [Ikt] ;</span><br><span class="line">            new_deaths = sum(beta_all_cell&#123;<span class="built_in">j</span>&#125;'.*X, <span class="number">2</span>);</span><br><span class="line">            </span><br><span class="line">            new_deaths = (new_deaths+<span class="built_in">abs</span>(new_deaths))/<span class="number">2</span>; <span class="comment">% If negative, replace it with zero</span></span><br><span class="line">            </span><br><span class="line">            pred_deaths(<span class="built_in">j</span>, t-T_start+<span class="number">1</span>) = base_deaths(<span class="built_in">j</span>) + new_deaths;</span><br><span class="line">            base_deaths(<span class="built_in">j</span>) = pred_deaths(<span class="built_in">j</span>, t-T_start+<span class="number">1</span>);</span><br><span class="line">        <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<p>   我们将这些结果与SEIR模型的最新广义版本进行比较[14]。</p>
+<p>   除了RMSE，我们还测量了平均绝对百分比误差，定义如下</p>
+<p><img src="https://i.loli.net/2020/11/13/Az5WlXQTZBN9ve3.png" alt="image-20201113003027532"></p>
+<p>比较显示在表1中，我们使用了基准的公开可用实施方式。我们观察到，固定和可变超参数选择均大大优于基准。 固定方案和可变方案的性能均相当。 我们将两个预测的平均值用作“整体”预测，其效果要比两个方案都更好。 应当指出的是，不同国家的案件数量有数量级的差异。 过滤掉少数病例的国家将大大减少MAPE，但会增加RMSE。 例如，仅考虑美国进行的国家/地区预测，所有这三个（固定，可变和集成）的RMSE均为6886.9，相当于MAPE为1.12％。</p>
+<p><img src="https://i.loli.net/2020/11/15/PZfULMRiVj6J4dp.png" alt="image-20201115173825040"></p>
+<h5 id="5-2-人口流动对疫情传播的影响"><a href="#5-2-人口流动对疫情传播的影响" class="headerlink" title="5-2. 人口流动对疫情传播的影响"></a>5-2. 人口流动对疫情传播的影响</h5><p>为了衡量旅行的影响，我们在3月18日之前使用数据训练模型，包括和不包括旅行数据。 接下来的三天用作确认最佳超参数的验证集，接下来的三天用作评估的测试集</p>
+<p><img src="https://i.loli.net/2020/11/15/k4ACLKbPzZVpqTt.png" alt="image-20201115174905797"></p>
+<p>图2显示了美国四个州在H = 5天时使用SI-kJ（整体）预测的测试结果。 这些是任意选择的； 其他州也显示出类似的结果。</p>
+<p><img src="https://i.loli.net/2020/11/15/J5RZksTNhoC9mBU.png" alt="image-20201115174928314"></p>
+<p>图3显示了四个国家在H = 5天时的测试结果。 同样，这些是任意选择的。 请注意，这些预测非常准确。 对于这些结果，我们将所有流动性项（F（p; q））都设置为零，以反映出由于“居家”政策在全球范围内的影响，最近因旅行而产生的价差可以忽略不计，这也减少了数量 要学习的参数。较早的时候，我们将包括移动性并在下面讨论详细信息。</p>
+<p><img src="https://i.loli.net/2020/11/15/SP3xWKkmjUwNHdr.png" alt="image-20201115175905631"></p>
+<p>表2显示了可变和固定超参数选择方案的验证和测试错误，每个方案都有和没有行程。 请注意，在所有情况下，包括旅行数据，都会降低测试集中的RMSE。 对于美国各州，可变超参数方案的效果更好，而对于全球各州，固定方案的RMSE较低。 这可能是由于缺少足够的数据导致变量超参数方案的过度拟合。<br>   从验证误差远低于测试误差的事实可以明显看出这一点。 该观察结果还支持采用集成方法而不是选择可变或固定方案之一的决定。</p>
+
+
+                <hr>
+
+                
+
+                <ul class="pager">
+                    
+                        <li class="previous">
+                            <a href="/2020/11/02/Prediction/" data-toggle="tooltip" data-placement="top" title="COVID-19 Analyze and Forecast based on non-linear science theory">&larr; Previous Post</a>
+                        </li>
+                    
+                    
+                        <li class="next">
+                            <a href="/2020/10/27/hello-world/" data-toggle="tooltip" data-placement="top" title="Hello World">Next Post &rarr;</a>
+                        </li>
+                    
+                </ul>
+
+                
+
+                
+                <!-- disqus 评论框 start -->
+                <div class="comment">
+                    <div id="disqus_thread" class="disqus-thread"></div>
+                </div>
+                <!-- disqus 评论框 end -->
+                
+
+            </div>
+    <!-- Side Catalog Container -->
+        
+
+    <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/tags/#COVID-19" title="COVID-19">COVID-19</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="https://weibo.com/6558983506/profile?topnav=1&amp;wvr=6&amp;is_all=1" target="_blank">Vellichor-Kyst ^ 微博</a></li>
+                    
+                        <li><a href="https://weibo.com/u/5842059988?refer_flag=1005055013_" target="_blank">Vellichor的尚礼礼 ^ 微博</a></li>
+                    
+                </ul>
+                
+            </div>
+
+        </div>
+    </div>
+</article>
+
+
+
+
+<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = "hexo-theme-huxblog";
+    var disqus_identifier = "http://https://eviliclufas.github.io/2020/11/02/PredictionCOVID-19/";
+    var disqus_url = "http://https://eviliclufas.github.io/2020/11/02/PredictionCOVID-19/";
+
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<!-- disqus 公共JS代码 end -->
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'always',
+          placement: 'right',
+          icon: '#'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                
+                
+                
+
+                
+                    <li>
+                        <a target="_blank" href="http://weibo.com/Vellichor-Kyst">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/EvilicLufas">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://www.linkedin.com/in/Gao Ge">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; Vellichor Kyst&#39;s Blog 2020 
+                    <br>
+                    Theme by <a href="http://huangxuan.me">Hux</a> 
+                    <span style="display: inline-block; margin: 0 5px;">
+                        <i class="fa fa-heart"></i>
+                    </span> 
+                    Ported by <a href="http://blog.kaijun.rocks">Kaijun</a> | 
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="91px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=kaijun&repo=hexo-theme-huxblog&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js"></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("http://https://eviliclufas.github.io/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+<script>
+    // dynamic User by Hux
+    var _gaId = 'UA-49627206-1';
+    var _gaDomain = 'huangxuan.me';
+
+    // Originial
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+
+
+<!-- Baidu Tongji -->
+
+<script>
+    // dynamic User by Hux
+    var _baId = '4cc1f2d8f3067386cc5cdb626a202900';
+
+    // Originial
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?" + _baId;
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+<!-- Side Catalog -->
+
+
+
+
+
+<!-- Image to hack wechat -->
+<img src="http://https://eviliclufas.github.io/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>
