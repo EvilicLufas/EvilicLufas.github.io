@@ -104,7 +104,21 @@
 
                         
                         <li>
+                            <a href="/不可公开hidden_posts/Prediction.html">COVID-19 Analyze and Forecast based on non-linear science theory</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
                             <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/不可公开hidden_posts/PredictionCOVID-19.html">COVID-19 Analyze and Forecast based on non-linear science theory</a>
                         </li>
                         
                     
@@ -191,7 +205,8 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <h4 id="121-买卖股票的最佳时机"><a href="#121-买卖股票的最佳时机" class="headerlink" title="121. 买卖股票的最佳时机"></a><a href="https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/" target="_blank" rel="noopener">121. 买卖股票的最佳时机</a></h4><h3 id="Ch1-题目描述"><a href="#Ch1-题目描述" class="headerlink" title="Ch1. 题目描述"></a>Ch1. 题目描述</h3><p>给定一个数组，它的第 <em>i</em> 个元素是一支给定股票第 <em>i</em> 天的价格。</p>
+                <h1 id="121-买卖股票的最佳时机"><a href="#121-买卖股票的最佳时机" class="headerlink" title="121. 买卖股票的最佳时机"></a><a href="https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/" target="_blank" rel="noopener">121. 买卖股票的最佳时机</a></h1><p>[TOC]</p>
+<h3 id="Ch1-题目描述"><a href="#Ch1-题目描述" class="headerlink" title="Ch1. 题目描述"></a>Ch1. 题目描述</h3><p>给定一个数组，它的第 <em>i</em> 个元素是一支给定股票第 <em>i</em> 天的价格。</p>
 <p>如果你最多只允许完成一笔交易（即买入和卖出一支股票一次），设计一个算法来计算你所能获取的最大利润。</p>
 <p>注意：你不能在买入股票前卖出股票。</p>
 <p><strong>示例 1:</strong></p>
@@ -254,27 +269,22 @@
 <p>把上面的状态转移方程总结一下：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">base case：</span><br><span class="line">dp[<span class="number">-1</span>][k][<span class="number">0</span>] = dp[i][<span class="number">0</span>][<span class="number">0</span>] = <span class="number">0</span></span><br><span class="line">dp[<span class="number">-1</span>][k][<span class="number">1</span>] = dp[i][<span class="number">0</span>][<span class="number">1</span>] = -infinity</span><br><span class="line"></span><br><span class="line">状态转移方程：</span><br><span class="line">dp[i][k][<span class="number">0</span>] = max(dp[i<span class="number">-1</span>][k][<span class="number">0</span>], dp[i<span class="number">-1</span>][k][<span class="number">1</span>] + prices[i])</span><br><span class="line">dp[i][k][<span class="number">1</span>] = max(dp[i<span class="number">-1</span>][k][<span class="number">1</span>], dp[i<span class="number">-1</span>][k<span class="number">-1</span>][<span class="number">0</span>] - prices[i])</span><br></pre></td></tr></table></figure>
 <p>读者可能会问，这个数组索引是 -1 怎么编程表示出来呢，负无穷怎么表示呢？这都是细节问题，有很多方法实现。现在完整的框架已经完成，下面开始具体化。</p>
-<h4 id="三、秒杀题目"><a href="#三、秒杀题目" class="headerlink" title="三、秒杀题目"></a><strong>三、秒杀题目</strong></h4><p><strong>第一题，k = 1</strong></p>
-<p>直接套状态转移方程，根据 base case，可以做一些化简：</p>
+<h4 id="三、秒杀题目"><a href="#三、秒杀题目" class="headerlink" title="三、秒杀题目"></a><strong>三、秒杀题目</strong></h4><h5 id="第一题，k-1"><a href="#第一题，k-1" class="headerlink" title="第一题，k = 1"></a><strong>第一题，k = 1</strong></h5><p>直接套状态转移方程，根据 base case，可以做一些化简：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">dp[i][<span class="number">1</span>][<span class="number">0</span>] = max(dp[i<span class="number">-1</span>][<span class="number">1</span>][<span class="number">0</span>], dp[i<span class="number">-1</span>][<span class="number">1</span>][<span class="number">1</span>] + prices[i])</span><br><span class="line">dp[i][<span class="number">1</span>][<span class="number">1</span>] = max(dp[i<span class="number">-1</span>][<span class="number">1</span>][<span class="number">1</span>], dp[i<span class="number">-1</span>][<span class="number">0</span>][<span class="number">0</span>] - prices[i]) </span><br><span class="line">            = max(dp[i<span class="number">-1</span>][<span class="number">1</span>][<span class="number">1</span>], -prices[i])</span><br><span class="line">解释：k = <span class="number">0</span> 的 base case，所以 dp[i<span class="number">-1</span>][<span class="number">0</span>][<span class="number">0</span>] = <span class="number">0</span>。</span><br><span class="line"></span><br><span class="line">现在发现 k 都是 <span class="number">1</span>，不会改变，即 k 对状态转移已经没有影响了。</span><br><span class="line">可以进行进一步化简去掉所有 k：</span><br><span class="line">dp[i][<span class="number">0</span>] = max(dp[i<span class="number">-1</span>][<span class="number">0</span>], dp[i<span class="number">-1</span>][<span class="number">1</span>] + prices[i])</span><br><span class="line">dp[i][<span class="number">1</span>] = max(dp[i<span class="number">-1</span>][<span class="number">1</span>], -prices[i])</span><br></pre></td></tr></table></figure>
 <p>两种方式都是一样的，不过这种编程方法简洁很多。但是如果没有前面状态转移方程的引导，是肯定看不懂的。后续的题目，我主要写这种空间复杂度 O(1) 的解法。</p>
-<p><strong>第二题，k = +infinity</strong></p>
-<p>如果 k 为正无穷，那么就可以认为 k 和 k - 1 是一样的。可以这样改写框架：</p>
+<h5 id="第二题，k-infinity"><a href="#第二题，k-infinity" class="headerlink" title="第二题，k = +infinity"></a><strong>第二题，k = +infinity</strong></h5><p>如果 k 为正无穷，那么就可以认为 k 和 k - 1 是一样的。可以这样改写框架：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">dp[i][k][<span class="number">0</span>] = max(dp[i<span class="number">-1</span>][k][<span class="number">0</span>], dp[i<span class="number">-1</span>][k][<span class="number">1</span>] </span><br><span class="line">+ prices[i])dp[i][k][<span class="number">1</span>] </span><br><span class="line">			= max(dp[i<span class="number">-1</span>][k][<span class="number">1</span>], dp[i<span class="number">-1</span>][k<span class="number">-1</span>][<span class="number">0</span>] - prices[i])            </span><br><span class="line">			= max(dp[i<span class="number">-1</span>][k][<span class="number">1</span>], dp[i<span class="number">-1</span>][k][<span class="number">0</span>] - prices[i])</span><br><span class="line">我们发现数组中的 k 已经不会改变了，也就是说不需要记录 k 这个状态了：</span><br><span class="line">dp[i][<span class="number">0</span>] 	= max(dp[i<span class="number">-1</span>][<span class="number">0</span>], dp[i<span class="number">-1</span>][<span class="number">1</span>] + prices[i])dp[i][<span class="number">1</span>] </span><br><span class="line">			= max(dp[i<span class="number">-1</span>][<span class="number">1</span>], dp[i<span class="number">-1</span>][<span class="number">0</span>] - prices[i])</span><br></pre></td></tr></table></figure>
 <p>直接翻译成代码：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">int maxProfit_k_inf(int[] prices) &#123;</span><br><span class="line">    int n = prices.length;</span><br><span class="line">    int dp_i_0 = <span class="number">0</span>, dp_i_1 = Integer.MIN_VALUE;</span><br><span class="line">    <span class="keyword">for</span> (int i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        int temp = dp_i_0;</span><br><span class="line">        dp_i_0 = Math.max(dp_i_0, dp_i_1 + prices[i]);</span><br><span class="line">        dp_i_1 = Math.max(dp_i_1, temp - prices[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dp_i_0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>第三题，k = +infinity with cooldown</strong></p>
-<p>每次 sell 之后要等一天才能继续交易。只要把这个特点融入上一题的状态转移方程即可：</p>
+<h5 id="第三题，k-infinity-with-cooldown"><a href="#第三题，k-infinity-with-cooldown" class="headerlink" title="第三题，k = +infinity with cooldown"></a><strong>第三题，k = +infinity with cooldown</strong></h5><p>每次 sell 之后要等一天才能继续交易。只要把这个特点融入上一题的状态转移方程即可：</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dp[<span class="string">i</span>][<span class="symbol">0</span>] = max(dp[<span class="string">i-1</span>][<span class="symbol">0</span>], dp[<span class="string">i-1</span>][<span class="symbol">1</span>] + prices[i])</span><br><span class="line">dp[<span class="string">i</span>][<span class="symbol">1</span>] = max(dp[<span class="string">i-1</span>][<span class="symbol">1</span>], dp[<span class="string">i-2</span>][<span class="symbol">0</span>] - prices[i])</span><br><span class="line">解释：第 i 天选择 buy 的时候，要从 i-2 的状态转移，而不是 i-1 。</span><br></pre></td></tr></table></figure>
 <p>翻译成代码：</p>
 <figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">maxProfit_with_cool</span><span class="params">(<span class="keyword">int</span>[] prices)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n = prices.length;</span><br><span class="line">    <span class="keyword">int</span> dp_i_0 = <span class="number">0</span>, dp_i_1 = Integer.MIN_VALUE;</span><br><span class="line">    <span class="keyword">int</span> dp_pre_0 = <span class="number">0</span>; <span class="comment">// 代表 dp[i-2][0]</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="keyword">int</span> temp = dp_i_0;</span><br><span class="line">        dp_i_0 = Math.<span class="built_in">max</span>(dp_i_0, dp_i_1 + prices[i]);</span><br><span class="line">        dp_i_1 = Math.<span class="built_in">max</span>(dp_i_1, dp_pre_0 - prices[i]);</span><br><span class="line">        dp_pre_0 = temp;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dp_i_0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>第四题，k = +infinity with fee</strong></p>
-<p>每次交易要支付手续费，只要把手续费从利润中减去即可。改写方程：</p>
+<h5 id="第四题，k-infinity-with-fee"><a href="#第四题，k-infinity-with-fee" class="headerlink" title="第四题，k = +infinity with fee"></a><strong>第四题，k = +infinity with fee</strong></h5><p>每次交易要支付手续费，只要把手续费从利润中减去即可。改写方程：</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">dp[<span class="string">i</span>][<span class="symbol">0</span>] = max(dp[<span class="string">i-1</span>][<span class="symbol">0</span>], dp[<span class="string">i-1</span>][<span class="symbol">1</span>] + prices[i])</span><br><span class="line">dp[<span class="string">i</span>][<span class="symbol">1</span>] = max(dp[<span class="string">i-1</span>][<span class="symbol">1</span>], dp[<span class="string">i-1</span>][<span class="symbol">0</span>] - prices[i] - fee)</span><br><span class="line">解释：相当于买入股票的价格升高了。</span><br><span class="line">在第一个式子里减也是一样的，相当于卖出股票的价格减小了。</span><br></pre></td></tr></table></figure>
 <p>直接翻译成代码：</p>
 <figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">maxProfit_with_fee</span><span class="params">(<span class="keyword">int</span>[] prices, <span class="keyword">int</span> fee)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n = prices.length;</span><br><span class="line">    <span class="keyword">int</span> dp_i_0 = <span class="number">0</span>, dp_i_1 = Integer.MIN_VALUE;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++) &#123;</span><br><span class="line">        <span class="keyword">int</span> temp = dp_i_0;</span><br><span class="line">        dp_i_0 = Math.<span class="built_in">max</span>(dp_i_0, dp_i_1 + prices[i]);</span><br><span class="line">        dp_i_1 = Math.<span class="built_in">max</span>(dp_i_1, temp - prices[i] - fee);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dp_i_0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>第五题，k = 2</strong></p>
-<p>k = 2 和前面题目的情况稍微不同，因为上面的情况都和 k 的关系不太大。要么 k 是正无穷，状态转移和 k 没关系了；要么 k = 1，跟 k = 0 这个 base case 挨得近，最后也没有存在感。</p>
+<h5 id="第五题，k-2"><a href="#第五题，k-2" class="headerlink" title="第五题，k = 2"></a><strong>第五题，k = 2</strong></h5><p>k = 2 和前面题目的情况稍微不同，因为上面的情况都和 k 的关系不太大。要么 k 是正无穷，状态转移和 k 没关系了；要么 k = 1，跟 k = 0 这个 base case 挨得近，最后也没有存在感。</p>
 <p>这道题 k = 2 和后面要讲的 k 是任意正整数的情况中，对 k 的处理就凸显出来了。我们直接写代码，边写边分析原因。</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">原始的动态转移方程，没有可化简的地方</span><br><span class="line">dp[<span class="string">i</span>][<span class="symbol">k</span>][<span class="string">0</span>] = max(dp[<span class="string">i-1</span>][<span class="symbol">k</span>][<span class="string">0</span>], dp[<span class="string">i-1</span>][<span class="symbol">k</span>][<span class="string">1</span>] + prices[i])</span><br><span class="line">dp[<span class="string">i</span>][<span class="symbol">k</span>][<span class="string">1</span>] = max(dp[<span class="string">i-1</span>][<span class="symbol">k</span>][<span class="string">1</span>], dp[<span class="string">i-1</span>][<span class="symbol">k-1</span>][<span class="string">0</span>] - prices[i])</span><br></pre></td></tr></table></figure>
 <p>按照之前的代码，我们可能想当然这样写代码（错误的）：</p>
@@ -288,8 +298,7 @@
 <p>这里 k 取值范围比较小，所以可以不用 for 循环，直接把 k = 1 和 2 的情况全部列举出来也可以：</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dp[<span class="string">i</span>][<span class="symbol">2</span>][<span class="string">0</span>] = max(dp[<span class="string">i-1</span>][<span class="symbol">2</span>][<span class="string">0</span>], dp[<span class="string">i-1</span>][<span class="symbol">2</span>][<span class="string">1</span>] + prices[<span class="string">i</span>])dp[<span class="string">i</span>][<span class="symbol">2</span>][<span class="string">1</span>] = max(dp[<span class="string">i-1</span>][<span class="symbol">2</span>][<span class="string">1</span>], dp[<span class="string">i-1</span>][<span class="symbol">1</span>][<span class="string">0</span>] - prices[<span class="string">i</span>])dp[<span class="string">i</span>][<span class="symbol">1</span>][<span class="string">0</span>] = max(dp[<span class="string">i-1</span>][<span class="symbol">1</span>][<span class="string">0</span>], dp[<span class="string">i-1</span>][<span class="symbol">1</span>][<span class="string">1</span>] + prices[<span class="string">i</span>])dp[<span class="string">i</span>][<span class="symbol">1</span>][<span class="string">1</span>] = max(dp[<span class="string">i-1</span>][<span class="symbol">1</span>][<span class="string">1</span>], -prices[i])</span><br><span class="line">int maxProfit<span class="emphasis">_k_</span>2(int[] prices) &#123;    int dp<span class="emphasis">_i10 = 0, dp_</span>i11 = Integer.MIN<span class="emphasis">_VALUE;    int dp_</span>i20 = 0, dp<span class="emphasis">_i21 = Integer.MIN_</span>VALUE;    for (int price : prices) &#123;        dp<span class="emphasis">_i20 = Math.max(dp_</span>i20, dp<span class="emphasis">_i21 + price);        dp_</span>i21 = Math.max(dp<span class="emphasis">_i21, dp_</span>i10 - price);        dp<span class="emphasis">_i10 = Math.max(dp_</span>i10, dp<span class="emphasis">_i11 + price);        dp_</span>i11 = Math.max(dp<span class="emphasis">_i11, -price);    &#125;    return dp_</span>i20;&#125;</span><br></pre></td></tr></table></figure>
 <p>有状态转移方程和含义明确的变量名指导，相信你很容易看懂。其实我们可以故弄玄虚，把上述四个变量换成 a, b, c, d。这样当别人看到你的代码时就会大惊失色，对你肃然起敬。</p>
-<p><strong>第六题，k = any integer</strong></p>
-<p>有了上一题 k = 2 的铺垫，这题应该和上一题的第一个解法没啥区别。但是出现了一个超内存的错误，原来是传入的 k 值会非常大，dp 数组太大了。现在想想，交易次数 k 最多有多大呢？</p>
+<h5 id="第六题，k-any-integer"><a href="#第六题，k-any-integer" class="headerlink" title="第六题，k = any integer"></a><strong>第六题，k = any integer</strong></h5><p>有了上一题 k = 2 的铺垫，这题应该和上一题的第一个解法没啥区别。但是出现了一个超内存的错误，原来是传入的 k 值会非常大，dp 数组太大了。现在想想，交易次数 k 最多有多大呢？</p>
 <p>一次交易由买入和卖出构成，至少需要两天。所以说有效的限制 k 应该不超过 n/2，如果超过，就没有约束作用了，相当于 k = +infinity。这种情况是之前解决过的。</p>
 <p>直接把之前的代码重用：</p>
 <figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int maxProfit_k_any(int max_k, int[] prices) &#123;    int n = prices.length;    if (max_k &gt; n / <span class="number">2</span>)         return maxProfit_k_inf(prices);</span><br><span class="line">    int[][][] dp = new int[n][max_k + <span class="number">1</span>][<span class="number">2</span>];    for (int i = <span class="number">0</span>; i &lt; n; i++)         for (int k = max_k; k &gt;= <span class="number">1</span>; k--) &#123;            if (i - <span class="number">1</span> == <span class="number">-1</span>) &#123; <span class="comment">/* 处理 base case */</span> &#125;            dp[i][k][<span class="number">0</span>] = max(dp[i<span class="number">-1</span>][k][<span class="number">0</span>], dp[i<span class="number">-1</span>][k][<span class="number">1</span>] + prices[i]);            dp[i][k][<span class="number">1</span>] = max(dp[i<span class="number">-1</span>][k][<span class="number">1</span>], dp[i<span class="number">-1</span>][k<span class="number">-1</span>][<span class="number">0</span>] - prices[i]);             &#125;    return dp[n - <span class="number">1</span>][max_k][<span class="number">0</span>];&#125;</span><br></pre></td></tr></table></figure>
@@ -298,7 +307,12 @@
 <p>本文给大家讲了如何通过状态转移的方法解决复杂的问题，用一个状态转移方程秒杀了 6 道股票买卖问题，现在想想，其实也不算难对吧？这已经属于动态规划问题中较困难的了。</p>
 <p>关键就在于列举出所有可能的「状态」，然后想想怎么穷举更新这些「状态」。一般用一个多维 dp 数组储存这些状态，从 base case 开始向后推进，推进到最后的状态，就是我们想要的答案。想想这个过程，你是不是有点理解「动态规划」这个名词的意义了呢？</p>
 <p>具体到股票买卖问题，我们发现了三个状态，使用了一个三维数组，无非还是穷举 + 更新，不过我们可以说的高大上一点，这叫「三维 DP」</p>
-<h3 id="Ch3-leetcode解法"><a href="#Ch3-leetcode解法" class="headerlink" title="Ch3. leetcode解法"></a>Ch3. leetcode解法</h3><h4 id="3-1-买卖股票的最佳时机（简单）"><a href="#3-1-买卖股票的最佳时机（简单）" class="headerlink" title="3.1 买卖股票的最佳时机（简单）"></a>3.1 <a href="https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/solution/" target="_blank" rel="noopener">买卖股票的最佳时机（简单）</a></h4><p><img src="https://i.loli.net/2020/12/05/hP96a7TswOQAR8m.png" alt="8.jpg"><br>$dp[i][0]表示第i天卖出的最大收益$<br>$dp[i][1]表示第i天买入的最大收益$</p>
+<h3 id="Ch3-leetcode解法"><a href="#Ch3-leetcode解法" class="headerlink" title="Ch3. leetcode解法"></a>Ch3. leetcode解法</h3><h4 id="3-1-leetcode-121-买卖股票的最佳时机（简单）"><a href="#3-1-leetcode-121-买卖股票的最佳时机（简单）" class="headerlink" title="3.1 leetcode 121 买卖股票的最佳时机（简单）"></a>3.1 <a href="https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/solution/" target="_blank" rel="noopener">leetcode 121 买卖股票的最佳时机（简单）</a></h4><p>给定一个数组，它的第 <em>i</em> 个元素是一支给定股票第 <em>i</em> 天的价格。</p>
+<p>如果你最多只允许完成一笔交易（即买入和卖出一支股票一次），设计一个算法来计算你所能获取的最大利润。</p>
+<p>注意：你不能在买入股票前卖出股票。</p>
+<p><strong>示例 1:</strong></p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">输入:</span> <span class="string">[7,1,5,3,6,4]</span></span><br><span class="line"><span class="string">输出:</span> <span class="number">5</span></span><br><span class="line"><span class="string">解释:</span> <span class="string">在第</span> <span class="number">2</span> <span class="string">天（股票价格</span> <span class="string">=</span> <span class="number">1</span><span class="string">）的时候买入，在第</span> <span class="number">5</span> <span class="string">天（股票价格</span> <span class="string">=</span> <span class="number">6</span><span class="string">）的时候卖出，最大利润</span> <span class="string">=</span> <span class="number">6</span><span class="number">-1</span> <span class="string">=</span> <span class="number">5</span> <span class="string">。</span></span><br><span class="line">     <span class="string">注意利润不能是</span> <span class="number">7</span><span class="number">-1</span> <span class="string">=</span> <span class="number">6</span><span class="string">,</span> <span class="string">因为卖出价格需要大于买入价格；同时，你不能在买入前卖出股票。</span></span><br></pre></td></tr></table></figure>
+<h5 id="3-1-1-解法-动态规划"><a href="#3-1-1-解法-动态规划" class="headerlink" title="3.1.1 解法-动态规划"></a>3.1.1 解法-动态规划</h5><h6 id="3-1-1-1-原理"><a href="#3-1-1-1-原理" class="headerlink" title="3.1.1.1 原理"></a>3.1.1.1 原理</h6><p><img src="https://i.loli.net/2020/12/05/hP96a7TswOQAR8m.png" alt="8.jpg"><br>$dp[i][0]表示第i天卖出的最大收益$<br>$dp[i][1]表示第i天买入的最大收益$</p>
 <p>计算公式为:</p>
 <p>$$<br>dp[i][0] = max(dp[i-1][0],dp[i-1][1]+prices[i])<br>$$</p>
 <p>$$<br>dp[i][1] = max(dp[i-1][1],-prices[i])<br>$$</p>
@@ -326,8 +340,54 @@
 <td>$S2: 前一天持有股票，今天sell： dp[i-1][1]+prices[i]$</td>
 <td>$S2 : 前一天不持有股票，今天buy:-prices[i]$</td>
 </tr>
+</tbody>
+</table>
+<h6 id="3-1-1-2-代码实现（JAVA）"><a href="#3-1-1-2-代码实现（JAVA）" class="headerlink" title="3.1.1.2 代码实现（JAVA）:"></a>3.1.1.2 代码实现（JAVA）:</h6><p><strong>时间复杂度:O(N)</strong><br><strong>空间复杂度:O(N)</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxProfit</span><span class="params">(<span class="keyword">int</span>[] prices)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(prices==<span class="keyword">null</span> || prices.length==<span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> n = prices.length;</span><br><span class="line">        <span class="keyword">int</span>[][] dp = <span class="keyword">new</span> <span class="keyword">int</span>[n][<span class="number">2</span>];</span><br><span class="line">        dp[<span class="number">0</span>][<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">        dp[<span class="number">0</span>][<span class="number">1</span>] = -prices[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;n;++i) &#123;</span><br><span class="line">            <span class="comment">//第i天卖出的最大收益  </span></span><br><span class="line">            dp[i][<span class="number">0</span>] = Math.max(dp[i-<span class="number">1</span>][<span class="number">0</span>],dp[i-<span class="number">1</span>][<span class="number">1</span>]+prices[i]);</span><br><span class="line">            <span class="comment">//第i天买入的最大收益  </span></span><br><span class="line">            dp[i][<span class="number">1</span>] = Math.max(dp[i-<span class="number">1</span>][<span class="number">1</span>],-prices[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> dp[n-<span class="number">1</span>][<span class="number">0</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="3-1-2-解法-动态规划-空间优化"><a href="#3-1-2-解法-动态规划-空间优化" class="headerlink" title="3.1.2 解法-动态规划+空间优化"></a>3.1.2 解法-动态规划+空间优化</h5><p>动态规划的版本中我们创造了一个二维数组<br>根据前面的计算公式我们可以看出，求第i天的买入收益，卖出收益时，我们只需要用到第i-1天的值就可以了</p>
+<p>i-1天之前的值可以忽略掉</p>
+<p>我们求第i天卖出收益，只需要知道第i-1天买入收益，第i-1天卖出收益，第i天股价这几个变量就可以了<br>求第i天买入收益，只需要知道第i-1天买入收益，第天股价即可</p>
+<p>i-1天的值又通过i-2天得来，i-2天通过i-3天得来<br>所以我们只要初始化好第一天的值，一直用两个变量来往前推算就可以得到最终结果了<br><strong>时间复杂度:O(N)</strong><br><strong>空间复杂度:O(1)</strong></p>
+<h6 id="代码实现（JAVA）"><a href="#代码实现（JAVA）" class="headerlink" title="代码实现（JAVA）:"></a>代码实现（JAVA）:</h6><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxProfit</span><span class="params">(<span class="keyword">int</span>[] prices)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(prices==<span class="keyword">null</span> || prices.length==<span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> n = prices.length;</span><br><span class="line">        <span class="comment">//初始化第一天的值</span></span><br><span class="line">        <span class="keyword">int</span> dp0 = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> dp1 = -prices[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;n;++i) &#123;</span><br><span class="line">            <span class="comment">//dp0表示第i天卖出的最大收益</span></span><br><span class="line">            dp0 = Math.max(dp0,dp1+prices[i]);</span><br><span class="line">            <span class="comment">//dp1表示第i天买入的最大收益</span></span><br><span class="line">            dp1 = Math.max(dp1,-prices[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> Math.max(dp0,dp1);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>原文链接：<a href="https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/solution/wu-chong-shi-xian-xiang-xi-tu-jie-121-mai-mai-gu-p/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/solution/wu-chong-shi-xian-xiang-xi-tu-jie-121-mai-mai-gu-p/</a></p>
+<h4 id="3-2-leetcode-122-买卖股票的最佳时机-II（简单）"><a href="#3-2-leetcode-122-买卖股票的最佳时机-II（简单）" class="headerlink" title="3.2 leetcode 122 买卖股票的最佳时机 II（简单）"></a><a href="https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/" target="_blank" rel="noopener">3.2 leetcode 122 买卖股票的最佳时机 II（简单）</a></h4><p>给定一个数组，它的第 i 个元素是一支给定股票第 i 天的价格。</p>
+<p>设计一个算法来计算你所能获取的最大利润。你可以尽可能地完成更多的交易（多次买卖一支股票）。</p>
+<h5 id="与第一题公式区别缘由"><a href="#与第一题公式区别缘由" class="headerlink" title="与第一题公式区别缘由"></a>与第一题公式区别缘由</h5><p>与第一题区别为第一题只能买一次卖一次，本题可以无限买卖。</p>
+<p>这也是两个公式的区别之处，$dp[i][1] = max(dp[i-1][1], dp[i-1][0] - prices[i])$</p>
+<p>本题中今天持有了股票的情况S2昨天不持有股票今天Buy： $dp[i-1][0]-prices[i]$之所以与第一题只能进行一笔交易不同的点在于: 再能进行多笔交易的情况下收益是继承的，也就意味着在这次购买前第二题中的交易者有可能此前以及进行了多笔交易积累了财富，所以为之前的收益：$dp[i-1][0]$减去 $prices[i]$,</p>
+<p>而第一题中只可能进行一笔交易，也就是只能购买一次，故而在此次购买之前是肯定没有收益的，也就是 $dp[i-1][0] = 0$,所以公式单纯为 $dp[i][1] = max(dp[i-1][1],-prices[i])$</p>
+<p> 注意：你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）。</p>
+<h5 id="3-2-1-解法-动态规划二维数组"><a href="#3-2-1-解法-动态规划二维数组" class="headerlink" title="3.2.1 解法-动态规划二维数组"></a>3.2.1 解法-动态规划二维数组</h5><p>$dp[i][k][0]表示第i天卖出的最大收益$<br>$dp[i][k][1]表示第i天买入的最大收益$</p>
+<table>
+<thead>
+<tr>
+<th>$dp[i][k][0] = max(dp[i-1][k][0], dp[i-1][k][1] + prices[i])$</th>
+<th>今天我没有持有股票，有两种可能：</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>要么是我昨天就没有持有，然后今天选择 rest，所以我今天还是没有持有；</td>
+<td></td>
+</tr>
+<tr>
+<td>要么是我昨天持有股票，但是今天我 sell 了，所以我今天没有持有股票了。</td>
+<td></td>
+</tr>
 <tr>
 <td></td>
+<td></td>
+</tr>
+<tr>
+<td>$dp[i][k][1] = max(dp[i-1][k][1], dp[i-1][k][0] - prices[i])$</td>
+<td>今天我持有着股票，有两种可能：</td>
+</tr>
+<tr>
+<td>要么我昨天就持有着股票，然后今天选择 rest，所以我今天还持有着股票；</td>
+<td></td>
+</tr>
+<tr>
+<td>要么我昨天本没有持有，但今天我选择 buy，所以今天我就持有股票了。</td>
 <td></td>
 </tr>
 <tr>
@@ -335,20 +395,86 @@
 </tr>
 </tbody>
 </table>
-<p>时间复杂度:O(N)<br>空间复杂度:O(N)</p>
-<p>代码实现:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxProfit</span><span class="params">(<span class="keyword">int</span>[] prices)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(prices==<span class="keyword">null</span> || prices.length==<span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> n = prices.length;</span><br><span class="line">        <span class="keyword">int</span>[][] dp = <span class="keyword">new</span> <span class="keyword">int</span>[n][<span class="number">2</span>];</span><br><span class="line">        dp[<span class="number">0</span>][<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">        dp[<span class="number">0</span>][<span class="number">1</span>] = -prices[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;n;++i) &#123;</span><br><span class="line">            <span class="comment">//第i天卖出的最大收益  </span></span><br><span class="line">            dp[i][<span class="number">0</span>] = Math.max(dp[i-<span class="number">1</span>][<span class="number">0</span>],dp[i-<span class="number">1</span>][<span class="number">1</span>]+prices[i]);</span><br><span class="line">            <span class="comment">//第i天买入的最大收益  </span></span><br><span class="line">            dp[i][<span class="number">1</span>] = Math.max(dp[i-<span class="number">1</span>][<span class="number">1</span>],-prices[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> dp[n-<span class="number">1</span>][<span class="number">0</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>动态规划+空间优化<br>动态规划的两个版本中我们分别创建了两个一维数组，以及一个二维数组<br>根据前面的计算公式我们可以看出，求第i天的买入收益，卖出收益时，我们只需要用到第i-1天的值就可以了<br>i-1天之前的值可以忽略掉</p>
-<p>我们求第i天卖出收益，只需要知道第i-1天买入收益，第i-1天卖出收益，第i天股价这几个变量就可以了<br>求第i天买入收益，只需要知道第i-1天买入收益，第天股价即可</p>
-<p>i-1天的值又通过i-2天得来，i-2天通过i-3天得来<br>所以我们只要初始化好第一天的值，一直用两个变量来往前推算就可以得到最终结果了<br>时间复杂度:O(N)<br>空间复杂度:O(1)</p>
-<p>代码实现:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxProfit</span><span class="params">(<span class="keyword">int</span>[] prices)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(prices==<span class="keyword">null</span> || prices.length==<span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> n = prices.length;</span><br><span class="line">        <span class="comment">//初始化第一天的值</span></span><br><span class="line">        <span class="keyword">int</span> dp0 = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> dp1 = -prices[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;n;++i) &#123;</span><br><span class="line">            <span class="comment">//dp0表示第i天卖出的最大收益</span></span><br><span class="line">            dp0 = Math.max(dp0,dp1+prices[i]);</span><br><span class="line">            <span class="comment">//dp1表示第i天买入的最大收益</span></span><br><span class="line">            dp1 = Math.max(dp1,-prices[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> Math.max(dp0,dp1);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>链接：<a href="https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/solution/wu-chong-shi-xian-xiang-xi-tu-jie-121-mai-mai-gu-p/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/solution/wu-chong-shi-xian-xiang-xi-tu-jie-121-mai-mai-gu-p/</a></p>
-<p><a href="https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/" target="_blank" rel="noopener">买卖股票的最佳时机 II（简单）</a></p>
-<p><a href="https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iii/" target="_blank" rel="noopener">买卖股票的最佳时机 III（困难）</a></p>
-<p><a href="https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iv/" target="_blank" rel="noopener">买卖股票的最佳时机 IV（困难）</a></p>
-<p><a href="https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/" target="_blank" rel="noopener">最佳买卖股票时机含冷冻期（中等）</a></p>
-<p><a href="https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/" target="_blank" rel="noopener">买卖股票的最佳时机含手续费（中等）</a></p>
+<p>如果 k 为正无穷，那么就可以认为 k 和 k - 1 是一样的。可以这样改写框架：</p>
+<p>$dp[i][k][0] = max(dp[i-1][k][0], dp[i-1][k][1] + prices[i])$  不变    (1)</p>
+<p>$dp[i][k][1]  = max(dp[i-1][k][1], dp[i-1][k-1][0] - prices[i])            $  k-1 换为 k</p>
+<p>$dp[i][k][1] =  max(dp[i-1][k][1], dp[i-1][k][0] - prices[i])$            (2)</p>
+<p>由（1）（2）知道数组中的 k 已经不会改变了，也就是说不需要记录 k 这个状态了，去掉公式中k</p>
+<p>计算公式为:</p>
+<p>$$<br>dp[i][0] = max(dp[i-1][0],dp[i-1][1]+prices[i])<br>$$</p>
+<p>$$<br>dp[i][1] = max(dp[i-1][1],dp[i-1][0] - prices[i])<br>$$</p>
+<table>
+<thead>
+<tr>
+<th>$dp[i][0] = max(dp[i-1][0],dp[i-1][1]+prices[i])$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$dp[i][0]表示第i天sell的最大收益$</td>
+</tr>
+<tr>
+<td>$第i天不持有股票有两种情况$</td>
+</tr>
+<tr>
+<td>$S1:前一天就没有持有股票，今天依然不buy： dp[i-1][0]$</td>
+</tr>
+<tr>
+<td>$S2: 前一天持有股票，今天sell： dp[i-1][1]+prices[i]$</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>$dp[i][1] = max(dp[i-1][1], dp[i-1][0] - prices[i])$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$dp[i][1]表示第i天buy的最大收益$</td>
+</tr>
+<tr>
+<td>$第i天持有股票有两种情况$</td>
+</tr>
+<tr>
+<td>$S1 : 前一天就持有股票，今天依然不sell： dp[i-1][0]$</td>
+</tr>
+<tr>
+<td>$S2 : 前一天不持有股票，今天buy:-prices[i]$</td>
+</tr>
+</tbody>
+</table>
+<p>时间复杂度: O(N)<br>空间复杂度: O(N)</p>
+<h6 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现:"></a>代码实现:</h6><p>java</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxProfit</span><span class="params">(<span class="keyword">int</span>[] prices)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(prices==<span class="keyword">null</span> || prices.length==<span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> n = prices.length;</span><br><span class="line">        <span class="keyword">int</span>[][] dp = <span class="keyword">new</span> <span class="keyword">int</span>[n][<span class="number">2</span>];</span><br><span class="line">        <span class="comment">//初始化第一天</span></span><br><span class="line">        dp[<span class="number">0</span>][<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">        dp[<span class="number">0</span>][<span class="number">1</span>] = -prices[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;n;++i) &#123;</span><br><span class="line">            <span class="comment">//求第i天的买入最大利润，卖出最大利润</span></span><br><span class="line">            dp[i][<span class="number">0</span>] = Math.max(dp[i-<span class="number">1</span>][<span class="number">0</span>],dp[i-<span class="number">1</span>][<span class="number">1</span>]+prices[i]);</span><br><span class="line">            dp[i][<span class="number">1</span>] = Math.max(dp[i-<span class="number">1</span>][<span class="number">1</span>],dp[i-<span class="number">1</span>][<span class="number">0</span>]-prices[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> Math.max(dp[n-<span class="number">1</span>][<span class="number">0</span>],dp[n-<span class="number">1</span>][<span class="number">1</span>]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h5 id="3-2-2-动态规划-空间优化"><a href="#3-2-2-动态规划-空间优化" class="headerlink" title="3.2.2 动态规划+空间优化"></a>3.2.2 动态规划+空间优化</h5><p>我们在求第i天卖出最大收益时，只需要这么几个变量:</p>
+<ul>
+<li>第 i-1天卖出的最大收益第</li>
+<li>i-1天买入的最大收益</li>
+<li>第 i 天的股价</li>
+</ul>
+<p>同样，我们在求第i天买入最大收益时，也是只需要这么几个变量:</p>
+<ul>
+<li>第i-1天买入的最大收益</li>
+<li>第i-1天卖出的最大收益</li>
+<li>第i天的股价</li>
+</ul>
+<p>也就是说，我们在求第i天买入/卖出收益时，只需要i-1天的买入/卖出收益即可，i-2、i-3…. 这些都不需要了<br>所以我们用两个变量来替换原先的二维数组<br>第i天卖出的最大收益计算公式:</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">第<span class="built_in">i</span><span class="number">-1</span>天卖出最大收益 vs 第<span class="built_in">i</span><span class="number">-1</span>天买入最大收益+当天股价</span><br><span class="line">dp0 = <span class="built_in">max</span>(dp0,dp1+prices[<span class="built_in">i</span>])</span><br></pre></td></tr></table></figure>
+<p>第i-1天卖出最大收益 vs 第i-1天买入最大收益+当天股价<br>dp0 = max(dp0,dp1+prices[i])<br>第i天买入的最大收益计算公式:</p>
+<p>第i-1天买入的最大收益 vs 第i-1天</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">第<span class="built_in">i</span><span class="number">-1</span>天买入的最大收益 vs 第<span class="built_in">i</span><span class="number">-1</span>天卖出的最大收益+当天股价</span><br><span class="line">dp1 = <span class="built_in">max</span>(dp1,dp0-prices[<span class="built_in">i</span>])</span><br></pre></td></tr></table></figure>
+<h6 id="代码实现-1"><a href="#代码实现-1" class="headerlink" title="代码实现:"></a>代码实现:</h6><p>java</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxProfit</span><span class="params">(<span class="keyword">int</span>[] prices)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(prices==<span class="keyword">null</span> || prices.length==<span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> n = prices.length;</span><br><span class="line">        <span class="comment">//初始化第一天</span></span><br><span class="line">        <span class="keyword">int</span> dp0 = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> dp1 = -prices[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;n;++i) &#123;</span><br><span class="line">            <span class="comment">//这里的dp0相当于二维数组的dp[i][0]</span></span><br><span class="line">            <span class="comment">//dp1相当于dp[i][1]</span></span><br><span class="line">            <span class="keyword">int</span> tmp = dp0;</span><br><span class="line">            dp0 = Math.max(dp0,dp1+prices[i]);</span><br><span class="line">            dp1 = Math.max(dp1,tmp-prices[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> Math.max(dp0,dp1);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>链接：<a href="https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/solution/si-chong-shi-xian-xiang-xi-tu-jie-122-mai-mai-gu-p/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/solution/si-chong-shi-xian-xiang-xi-tu-jie-122-mai-mai-gu-p/</a></p>
+<h4 id="3-3-leetcode-309-最佳买卖股票时机含冷冻期（中等）"><a href="#3-3-leetcode-309-最佳买卖股票时机含冷冻期（中等）" class="headerlink" title="3.3 leetcode 309 最佳买卖股票时机含冷冻期（中等）"></a><a href="https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/" target="_blank" rel="noopener">3.3 leetcode 309 最佳买卖股票时机含冷冻期（中等）</a></h4><p>给定一个整数数组，其中第 i 个元素代表了第 i 天的股票价格 。</p>
+<p>设计一个算法计算出最大利润。在满足以下约束条件下，你可以尽可能地完成更多的交易（多次买卖一支股票）:</p>
+<p>你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）。<br>卖出股票后，你无法在第二天买入股票 (即冷冻期为 1 天)。<br>示例:</p>
+<p>输入: [1,2,3,0,2]<br>输出: 3<br>解释: 对应的交易状态为: [买入, 卖出, 冷冻期, 买入, 卖出]</p>
+<p><a href="https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/" target="_blank" rel="noopener">3.4 买卖股票的最佳时机含手续费（中等）</a></p>
+<p><a href="https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iii/" target="_blank" rel="noopener">3.3买卖股票的最佳时机 III（困难）</a></p>
+<p><a href="https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-iv/" target="_blank" rel="noopener">3.4 买卖股票的最佳时机 IV（困难）</a></p>
 
 
                 <hr>
