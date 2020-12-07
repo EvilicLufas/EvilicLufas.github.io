@@ -90,14 +90,14 @@
 
                         
                         <li>
-                            <a href="/about/">About</a>
+                            <a href="/archives/">Archives</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/archives/">Archives</a>
+                            <a href="/about/">About</a>
                         </li>
                         
                     
@@ -189,54 +189,72 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <h1 id="毕设计划书"><a href="#毕设计划书" class="headerlink" title="毕设计划书"></a>毕设计划书</h1><p>Ch1. Video</p>
-<p><a href="https://www.deepvideoanalytics.com/" target="_blank" rel="noopener">https://www.deepvideoanalytics.com/</a></p>
-<p><img src="../../../../Users/Vilic/AppData/Roaming/Typora/typora-user-images/image-20201202202412728.png" alt="image-20201202202412728"></p>
-<p><img src="https://i.loli.net/2020/12/02/deuymZBzcHUPMoi.png" alt="image-20201202202436693"></p>
-<p><img src="https://i.loli.net/2020/12/02/HgUMFjLtksrAEwD.png" alt="image-20201202202458017"></p>
-<p><img src="https://i.loli.net/2020/12/02/JNBjMhPkZHUOKxa.png" alt="image-20201202202525637"></p>
-<p><img src="https://i.loli.net/2020/12/02/rwxLckj9bhDB2vQ.png" alt="image-20201202202548886"></p>
+                <h1 id="毕设计划书">毕设计划书</h1>
+<p>Ch1. Video</p>
+<p>https://www.deepvideoanalytics.com/</p>
+<figure>
+<img src="../../../../Users/Vilic/AppData/Roaming/Typora/typora-user-images/image-20201202202412728.png" alt="image-20201202202412728"><figcaption>image-20201202202412728</figcaption>
+</figure>
+<figure>
+<img src="https://i.loli.net/2020/12/02/deuymZBzcHUPMoi.png" alt="image-20201202202436693"><figcaption>image-20201202202436693</figcaption>
+</figure>
+<figure>
+<img src="https://i.loli.net/2020/12/02/HgUMFjLtksrAEwD.png" alt="image-20201202202458017"><figcaption>image-20201202202458017</figcaption>
+</figure>
+<figure>
+<img src="https://i.loli.net/2020/12/02/JNBjMhPkZHUOKxa.png" alt="image-20201202202525637"><figcaption>image-20201202202525637</figcaption>
+</figure>
+<figure>
+<img src="https://i.loli.net/2020/12/02/rwxLckj9bhDB2vQ.png" alt="image-20201202202548886"><figcaption>image-20201202202548886</figcaption>
+</figure>
 <p>现阶段疑惑：课题为视频中人物情绪的分类系统，那就是要精确到视频中的每一人物，而不是仅仅对视频本身进行分类，在此基础上，表情的识别可以实现，具体人物的语音数据需要人为标注，所以需要明确本系统是只能对视频进行分类，还是将视频切割为一个个片段对片段进行分类，或者是选择情绪显示其对应的视频片段</p>
 <ul>
-<li><h5 id="video-emotion-detector"><a href="#video-emotion-detector" class="headerlink" title="video emotion detector"></a>video emotion detector</h5></li>
+<li><h5 id="video-emotion-detector">video emotion detector</h5></li>
 </ul>
 <figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">AKIDJvIoCJ<span class="number">2</span>mJZppzutwgBxbmhdoZ<span class="number">5</span>kA<span class="symbol">n13</span>p</span><br></pre></td></tr></table></figure>
 <figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">f<span class="number">5</span>FQ<span class="number">2</span>OV<span class="symbol">NPC52</span>lESQFuYzMGuE<span class="symbol">NG1</span>oPz<span class="number">7</span>H</span><br></pre></td></tr></table></figure>
-<table>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 34%">
+<col style="width: 45%">
+<col style="width: 14%">
+<col style="width: 5%">
+</colgroup>
 <thead>
-<tr>
-<th>前端功能展示模块–视频分割剪辑模块</th>
+<tr class="header">
+<th>前端功能展示模块--视频分割剪辑模块</th>
 <th>解释</th>
 <th>实现</th>
 <th></th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>功能1 ：通过具体人脸的输入进行视频的分割与输出</td>
 <td>通过具体人脸的输入进行视频的分割，用户通过上传一个人脸图片，然后系统对具体人脸进行分析，之后自动对视频进行切割，分割出具有该人物的视频片段</td>
 <td></td>
 <td>API实现</td>
 </tr>
-<tr>
+<tr class="even">
 <td>功能2：视频自动分割</td>
 <td>无需通过具体人脸的输入进行视频的分割，用户无需上传一个人脸图片，然后系统对具体人脸进行分析，之后自动对视频进行切割，分割出具有人物的视频片段，用户可以设置容忍值，即为在指定片段内可以出现的不带人物的帧数</td>
 <td>moviepy等开源算法库</td>
 <td></td>
 </tr>
-<tr>
+<tr class="odd">
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
-<tr>
+<tr class="even">
 <td></td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
-<tr>
+<tr class="odd">
+<td></td>
 <td></td>
 <td></td>
 <td></td>
@@ -245,75 +263,111 @@
 </table>
 <table>
 <thead>
-<tr>
-<th>前端功能展示模块–视频分割剪辑模块</th>
+<tr class="header">
+<th>前端功能展示模块--视频分割剪辑模块</th>
 <th>解释</th>
 <th>实现</th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>功能3：视频语音识别</td>
 <td>系统对视频语音进行NLP识别转换为文字输出显示，并且分析其内在情感</td>
 <td>API</td>
 </tr>
-<tr>
+<tr class="even">
 <td>功能4：视频语音情绪识别</td>
 <td>系统对视频语音进行NLP识别转换为文字输出显示，并且分析其内在情感</td>
 <td>API</td>
 </tr>
-<tr>
+<tr class="odd">
 <td>功能5：视频人脸情绪识别</td>
 <td>系统对分割剪辑过的视频进行其人物的人脸情绪识别，并且分析其内在情感</td>
 <td></td>
 </tr>
-<tr>
+<tr class="even">
 <td>功能6：视频特定人物情绪识别</td>
 <td>系统对分割剪辑过的视频进行其人物的人脸情绪识别以及语音情绪识别的混合判断，并且分析其内在情感</td>
 <td></td>
 </tr>
-<tr>
+<tr class="odd">
+<td></td>
 <td></td>
 <td></td>
 </tr>
 </tbody>
 </table>
-<p><img src="https://i.loli.net/2020/12/01/GEtdIJm1Qbvj4SW.png" alt="image-20201201010144986"></p>
-<p><img src="https://i.loli.net/2020/12/01/U3tZ76JQpqsmaWc.gif" alt="Image"></p>
-<p><img src="https://i.loli.net/2020/12/01/Nc3Ugyi9IBe7spZ.png" alt="image-20201201003418979"></p>
-<p><img src="https://i.loli.net/2020/12/01/lrNogzCVIvn63Eu.png" alt="image-20201201005047533"></p>
-<h3 id="帧精确切割"><a href="#帧精确切割" class="headerlink" title="帧精确切割"></a>帧精确切割</h3><p>在线剪辑预览是基于HLS技术实现，HLS每一个分片都是一个TS文件，TS中存放时码的字段只有33位，每秒是90khz单位，该字段每26小时复位一次.还有时码跳变情况。</p>
+<figure>
+<img src="https://i.loli.net/2020/12/01/GEtdIJm1Qbvj4SW.png" alt="image-20201201010144986"><figcaption>image-20201201010144986</figcaption>
+</figure>
+<figure>
+<img src="https://i.loli.net/2020/12/01/U3tZ76JQpqsmaWc.gif" alt="Image"><figcaption>Image</figcaption>
+</figure>
+<figure>
+<img src="https://i.loli.net/2020/12/01/Nc3Ugyi9IBe7spZ.png" alt="image-20201201003418979"><figcaption>image-20201201003418979</figcaption>
+</figure>
+<figure>
+<img src="https://i.loli.net/2020/12/01/lrNogzCVIvn63Eu.png" alt="image-20201201005047533"><figcaption>image-20201201005047533</figcaption>
+</figure>
+<h3 id="帧精确切割">帧精确切割</h3>
+<p>在线剪辑预览是基于HLS技术实现，HLS每一个分片都是一个TS文件，TS中存放时码的字段只有33位，每秒是90khz单位，该字段每26小时复位一次.还有时码跳变情况。</p>
 <p>为什么要保证时码严格连续唯一单调递增呢？</p>
 <p>假如播放某个网络流，每一帧都有一个PTS,如果中间时码复位和跳变，播放就会异常或乱序。最常见直播过程出现半个小时断流，那么用户预览会半个小时黑屏，最好能够自动跳过黑屏部分，继续播放黑屏后面有效画面。seek操作也是同样的原理，如果用户显示时间轴上某个位置的帧，只有在连续唯一单调递增的时码里查找，才能够找到正确的帧。</p>
 <p>帧精确的关键所在是为每一帧设置一个严格连续单调递增的唯一时码。那如何才能实现单调递增的唯一时码呢？</p>
 <p>m3u8 文件中存储每一个 ts 分片都有一个近似时长字段</p>
 <p>“#EXT-X-TARGETDURATION”。那么可以给出每帧的 PTS 计算公式</p>
 <p>分片 PTS 计算公式：</p>
-<p><img src="https://blog-10039692.file.myqcloud.com/1500278326489_9931_1500278326610.jpg" alt="img"></p>
-<p>= </p>
-<p><img src="https://blog-10039692.file.myqcloud.com/1500278333869_5012_1500278333983.jpg" alt="img"></p>
-<p><img src="https://blog-10039692.file.myqcloud.com/1500278490346_7369_1500278490477.jpg" alt="img"></p>
+<figure>
+<img src="https://blog-10039692.file.myqcloud.com/1500278326489_9931_1500278326610.jpg" alt="img"><figcaption>img</figcaption>
+</figure>
+<p>=</p>
+<figure>
+<img src="https://blog-10039692.file.myqcloud.com/1500278333869_5012_1500278333983.jpg" alt="img"><figcaption>img</figcaption>
+</figure>
+<figure>
+<img src="https://blog-10039692.file.myqcloud.com/1500278490346_7369_1500278490477.jpg" alt="img"><figcaption>img</figcaption>
+</figure>
 <p>为第n片的近似时长,分片的实际时长</p>
-<p><img src="https://blog-10039692.file.myqcloud.com/1500278503707_5024_1500278503832.jpg" alt="img"></p>
+<figure>
+<img src="https://blog-10039692.file.myqcloud.com/1500278503707_5024_1500278503832.jpg" alt="img"><figcaption>img</figcaption>
+</figure>
 <p>,分片第一帧的</p>
-<p><img src="https://blog-10039692.file.myqcloud.com/1500278518167_5912_1500278518276.jpg" alt="img"></p>
+<figure>
+<img src="https://blog-10039692.file.myqcloud.com/1500278518167_5912_1500278518276.jpg" alt="img"><figcaption>img</figcaption>
+</figure>
 <p>,分片第i帧的</p>
-<p><img src="https://blog-10039692.file.myqcloud.com/1500278529554_1148_1500278529671.jpg" alt="img"></p>
+<figure>
+<img src="https://blog-10039692.file.myqcloud.com/1500278529554_1148_1500278529671.jpg" alt="img"><figcaption>img</figcaption>
+</figure>
 <p>，片内每帧PTS通过视频帧率和帧号计算得到。</p>
 <p>每帧PTS的计算公式：</p>
-<p><img src="https://blog-10039692.file.myqcloud.com/1500278622495_3298_1500278622610.jpg" alt="img"></p>
+<figure>
+<img src="https://blog-10039692.file.myqcloud.com/1500278622495_3298_1500278622610.jpg" alt="img"><figcaption>img</figcaption>
+</figure>
 <p>=</p>
-<p><img src="https://blog-10039692.file.myqcloud.com/1500278678478_1103_1500278678577.jpg" alt="img"></p>
-<p> + </p>
-<p><img src="https://blog-10039692.file.myqcloud.com/1500278639847_15_1500278639966.jpg" alt="img"></p>
+<figure>
+<img src="https://blog-10039692.file.myqcloud.com/1500278678478_1103_1500278678577.jpg" alt="img"><figcaption>img</figcaption>
+</figure>
+<p>+</p>
+<figure>
+<img src="https://blog-10039692.file.myqcloud.com/1500278639847_15_1500278639966.jpg" alt="img"><figcaption>img</figcaption>
+</figure>
 <p>经过计算后，</p>
-<p><img src="https://blog-10039692.file.myqcloud.com/1500278737743_4424_1500278738082.jpg" alt="img"></p>
-<p>&lt;= </p>
-<p><img src="https://blog-10039692.file.myqcloud.com/1500278748734_7492_1500278748877.jpg" alt="img"></p>
-<p> &lt;</p>
-<p><img src="https://blog-10039692.file.myqcloud.com/1500278779417_3616_1500278779522.jpg" alt="img"></p>
+<figure>
+<img src="https://blog-10039692.file.myqcloud.com/1500278737743_4424_1500278738082.jpg" alt="img"><figcaption>img</figcaption>
+</figure>
+<p>&lt;=</p>
+<figure>
+<img src="https://blog-10039692.file.myqcloud.com/1500278748734_7492_1500278748877.jpg" alt="img"><figcaption>img</figcaption>
+</figure>
+<p>&lt;</p>
+<figure>
+<img src="https://blog-10039692.file.myqcloud.com/1500278779417_3616_1500278779522.jpg" alt="img"><figcaption>img</figcaption>
+</figure>
 <p>,并严格唯一单调递增,即</p>
-<p><img src="https://blog-10039692.file.myqcloud.com/1500278786501_9990_1500278786618.jpg" alt="img"></p>
+<figure>
+<img src="https://blog-10039692.file.myqcloud.com/1500278786501_9990_1500278786618.jpg" alt="img"><figcaption>img</figcaption>
+</figure>
 <p>。</p>
 <p>从时间线精确切除某广告位置方法如下：</p>
 <p>（1）、用户先通过模糊seek定位广告所在分片n.</p>
